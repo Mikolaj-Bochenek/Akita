@@ -1,1 +1,15 @@
-<p>add-todo works!</p>
+<div class="container">
+  <h2>AddTodo</h2>
+  <mat-card>
+    <form [formGroup]="form" (ngSubmit)="form.valid && onAddTodo()">
+      <mat-form-field apperance="outline">
+        <input type="text" matInput placeholder="Title" formControlName="title">
+      </mat-form-field>
+      
+      <mat-form-field apperance="outline">
+        <input type="text" matInput placeholder="Description" formControlName="description">
+      </mat-form-field>
+      <button type="submit" mat-raised-button color="primary">Add Todo</button>
+    </form>
+  </mat-card>
+</div>
