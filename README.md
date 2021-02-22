@@ -2,6 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
 
+## Workflow
+![workflow](https://user-images.githubusercontent.com/60287968/108667254-168d0d00-74d9-11eb-8af1-eba07c738750.png)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
