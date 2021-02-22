@@ -9,10 +9,11 @@
     <mat-spinner *ngIf="loading"></mat-spinner>
     <ng-contriner *ngIf="!loading">
         <mat-card *ngFor="let todo of todos">
-            <p>{{ todo.title }}</p>
+            <p [ngClass]="{'complete': todo.status === 'done'}">{{ todo.title }}</p>
             <button
                 mat-stroked-button
-                color="primary">
+                color="primary"
+                (click)="markAsComplete(todo._id)">
                 Mark as Complete
             </button>
         </mat-card>

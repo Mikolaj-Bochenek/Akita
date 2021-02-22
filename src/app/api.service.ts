@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Todo } from './app.todo.model';
+import { Todo, TodoStatus } from './app.todo.model';
 import { environment } from '../environments/environment.prod';
 
 @Injectable({
@@ -27,7 +27,7 @@ export class ApiService {
     return this.http.delete<Todo>(`${this.baseUrl}/${id}`);
   }
 
-  updateTodo(id: string, changes: Todo): Observable<Todo> {
-    return this.http.put<Todo>(`${this.baseUrl}/${id}`, changes);
+  updateTodo(id: string, status: any): Observable<Todo> {
+    return this.http.put<Todo>(`${this.baseUrl}/${id}`, status);
   }
 }
