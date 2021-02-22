@@ -13,7 +13,7 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  addTask(title: string, description: string): Observable<Todo> {
+  addTodo(title: string, description: string): Observable<Todo> {
     return this.http.post<Todo>(this.baseUrl, { title, description });
   }
 
